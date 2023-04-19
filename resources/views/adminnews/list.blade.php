@@ -39,12 +39,13 @@
                             </th>
                             <td class="px-6 py-4">
 
+                                <!--injection de la -->
                                 {{$itemsActu->titre}}
                             </td>
                             
                             <td class="px-6 py-4">
                               <div class="flex justify-end gap-4">
-                                <a x-data="{ tooltip: 'Delete' }" href="#">
+                                <a  href="{{route('news.del',$itemsActu->id)}}">
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -61,7 +62,7 @@
                                     />
                                   </svg>
                                 </a>
-                                <a x-data="{ tooltip: 'Edite' }" href="#">
+                                <a href="{{route('news.edit', $itemsActu->id)}}">
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
